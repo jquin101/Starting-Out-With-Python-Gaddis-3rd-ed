@@ -1,0 +1,16 @@
+def main():
+    property_value = float(input('Enter the property value: '))
+    assessment_value = get_assessment(property_value)
+    property_tax = get_property(assessment_value)
+    print('Assessment Value: $', format(assessment_value, ',.2f'), sep='')
+    print('Property Tax: $', format(property_tax, ',.2f'), sep='')
+
+def get_assessment(property_value):
+    assessment = 0.60 * property_value
+    return assessment
+
+def get_property(assessment_value):
+    prop = 0.72 * (assessment_value / 100)
+    return prop
+
+main()
