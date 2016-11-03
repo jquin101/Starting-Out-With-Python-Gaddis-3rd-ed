@@ -1,0 +1,31 @@
+class_a = 20.00
+class_b = 15.00
+class_c = 10.00
+
+def main():
+    num_of_classA = get_num_classA()
+    num_of_classB = get_num_classB()
+    num_of_classC = get_num_classC()
+    total_revenue = get_total_revenue(num_of_classA, num_of_classB, \
+                                      num_of_classC)
+    print('______________________________________________')
+    print('Total Revenue: $', format(total_revenue, ',.2f'), sep='')
+
+def get_num_classA():
+    classA = int(input('Enter the number of Class A tickets sold: '))
+    return classA
+
+def get_num_classB():
+    classB = int(input('Enter the number of Class B tickets sold: '))
+    return classB
+
+def get_num_classC():
+    classC = int(input('Enter the number of Class C tickets sold: '))
+    return classC
+
+def get_total_revenue(num_of_classA, num_of_classB, num_of_classC):
+    total = (num_of_classA * class_a) + (num_of_classB * class_b) + \
+            (num_of_classC * class_c)
+    return total
+
+main()
