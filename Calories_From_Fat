@@ -1,0 +1,17 @@
+def main():
+    fat_grams = float(input('Enter the number of fat grams: '))
+    carb_grams = float(input('Enter the number of carb grams: '))
+    calories_from_fat = get_fat_grams(fat_grams)
+    calories_from_carbs = get_carb_grams(carb_grams)
+    print('Calories From Fat: ', format(calories_from_fat,',.2f'))
+    print('Calories From Carbs: ', format(calories_from_carbs, ',.2f'))
+
+def get_fat_grams(fat_grams):
+    fat = 9 * fat_grams
+    return fat
+
+def get_carb_grams(carb_grams):
+    carbs = 4 * carb_grams
+    return carbs
+
+main()
